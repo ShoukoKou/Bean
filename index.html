@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fbf7f2">
+    <meta name="description" content="Bean Blossoms, demostración de un taller peruano de flores artesanales de limpiapipas.">
+    <title>Bean Blossoms · Flores artesanales</title>
+    <link rel="icon" type="image/webp" href="img/tulipanes.webp">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script type="module" src="js/interfaz.mjs"></script>
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+    <div class="franja">Flores artesanales de limpiapipas · Demostración</div>
+    <header class="cabecera">
+        <div class="contenedor barra">
+            <button type="button" class="menu" aria-label="Menú" aria-expanded="false" aria-controls="navegacion">
+                <span class="icono-menu" aria-hidden="true"></span>
+            </button>
+            <a class="marca" href="#inicio">Bean Blossoms <small>Flores hechas a mano</small></a>
+            <nav id="navegacion" aria-label="Navegación principal">
+                <a href="#catalogo">Tienda</a>
+                <a href="#personalizar">Personaliza tu regalo</a>
+                <a href="#historia">Nuestro taller</a>
+            </nav>
+            <a class="seguimiento-cabecera" href="#seguimiento" aria-label="Mis pedidos">
+                <span>Mis pedidos</span>
+                <span class="icono-bolsa" aria-hidden="true"></span>
+            </a>
+        </div>
+    </header>
+
+    <main id="contenido" tabindex="-1">
+        <p id="aviso-almacenamiento" class="aviso contenedor" role="status" hidden></p>
+        <div id="vista"></div>
+        <noscript><p class="contenedor aviso">Activa JavaScript para explorar el catálogo y registrar solicitudes.</p></noscript>
+    </main>
+
+    <template id="plantilla-inicio">
+        <section class="portada" aria-labelledby="titulo-portada">
+            <div class="portada-texto">
+                <p class="rotulo">Flores artesanales hechas a mano</p>
+                <h1 id="titulo-portada" tabindex="-1">Hay detalles que se quedan.</h1>
+                <p>Ramos de limpiapipas, hechos flor por flor para acompañar un momento especial.</p>
+                <div class="acciones">
+                    <a class="boton" href="#catalogo">Ver diseños disponibles</a>
+                    <a class="boton secundario" href="#personalizar">Crear mi regalo</a>
+                </div>
+                <p class="nota-portada">Un pequeño gesto. Un recuerdo para guardar.</p>
+            </div>
+            <img class="foto-portada" src="img/ramo-portada.webp" alt="Ramo de flores rosadas y blancas de limpiapipas envuelto en papel rosa" width="1536" height="1024" fetchpriority="high">
+        </section>
+        <ul class="detalles-portada" aria-label="Sobre los arreglos">
+            <li><span aria-hidden="true">✿</span> Flores de limpiapipas</li>
+            <li><span aria-hidden="true">♡</span> Cada detalle, hecho a mano</li>
+            <li><span aria-hidden="true">◇</span> Personalización disponible</li>
+        </ul>
+        <section id="seccion-catalogo" class="contenedor seccion" aria-labelledby="titulo-catalogo">
+            <div class="encabezado-seccion">
+                <p class="rotulo">Flores para regalar</p>
+                <h2 id="titulo-catalogo" tabindex="-1">Tu próximo «me acordé de ti».</h2>
+                <p>Un ramo para esa fecha, ese abrazo o ese día cualquiera.</p>
+            </div>
+            <div id="productos" class="productos"></div>
+        </section>
+        <section class="historia" id="seccion-historia" aria-labelledby="titulo-historia">
+            <img src="img/tulipanes.webp" alt="Detalle de un ramo rosado artesanal" loading="lazy" width="724" height="724">
+            <div>
+                <p class="rotulo">Un regalo hecho a tu medida</p>
+                <h2 id="titulo-historia" tabindex="-1">Tan único como su historia.</h2>
+                <p>Dinos qué flores, colores y detalles imaginas. El taller revisará tu idea y podrás decidir cómo seguir.</p>
+                <a class="boton" href="#personalizar">Diseñar mi regalo</a>
+            </div>
+        </section>
+    </template>
+
+    <footer class="pie">
+        <div class="contenedor pie-interior">
+            <a class="marca" href="#inicio">Bean Blossoms</a>
+            <p>Prototipo académico · Perú. Usa datos ficticios.</p>
+            <a href="#taller">Panel del taller</a>
+            <a href="#seguimiento">Consultar mi solicitud</a>
+        </div>
+    </footer>
+</body>
+</html>
